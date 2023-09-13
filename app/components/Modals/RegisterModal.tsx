@@ -35,10 +35,14 @@ export default function RegisterModal() {
       .catch((error) => {
         console.log(error);
       })
-      .finally(() =>{
-        setIsLoading(false)
-      })
+      .finally(() => {
+        setIsLoading(false);
+      });
   };
 
-  return <Modal disabled={isLoading} />;
+  return;
+  <>
+    {/* <Modal disabled={isLoading}
+   />; */}
+  </>;
 }
