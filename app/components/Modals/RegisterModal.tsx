@@ -5,6 +5,7 @@ import { AiFillGithub } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 import { useCallback, useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
+
 import useRegisterModal from "@/app/hooks/useRegisterModal";
 import Modal from "./Modal";
 import Heading from "../Heading";
@@ -39,7 +40,7 @@ const RegisterModal = () => {
         registerModal.onClose();
       })
       .catch((error) => {
-        toast.error("Invalid registration");
+        toast.error("Something went wrong.");
       })
       .finally(() => {
         setIsLoading(false);
@@ -49,6 +50,7 @@ const RegisterModal = () => {
   const bodyContent = (
     <div className="flex flex-col gap-4">
       <Heading title="Welcome to Airbnb" subtitle="Create An Account!" center />
+
       <Input
         id="email"
         label="Email"
@@ -78,7 +80,13 @@ const RegisterModal = () => {
   );
 
   const footerContent = (
-    <div className="flex flex-col gap-4 mt-3">
+    <div
+      className="
+       flex 
+       flex-col 
+       gap-4
+       mt-3"
+    >
       <hr />
       <Button
         outline
@@ -86,18 +94,35 @@ const RegisterModal = () => {
         icon={FcGoogle}
         onClick={() => {}}
       />
+
       <Button
         outline
         label="Continue with Github"
         icon={AiFillGithub}
         onClick={() => {}}
       />
-      <div className="text-neutral-500 text-center mt-4 font-light">
-        <div className=" justify-center flex flex-row items-center gap-2">
+      <div
+        className="
+      text-neutral-500
+        text-center
+        mt-4 
+        font-light"
+      >
+        <div
+          className="
+         justify-center
+         flex 
+         flex-row 
+         items-center 
+         gap-2"
+        >
           <div>Already have an account?</div>
           <div
             onClick={registerModal.onClose}
-            className="text-neutral-800 cursor-pointer hover:underline"
+            className="
+            text-neutral-800 
+              cursor-pointer 
+              hover:underline"
           >
             Log In
           </div>

@@ -11,7 +11,7 @@ import TosterProvider from "./providers/TosterProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Airbnb",
+  title: "Full-Stack Airbnb Clone",
   description: "Airbnb clone",
 };
 
