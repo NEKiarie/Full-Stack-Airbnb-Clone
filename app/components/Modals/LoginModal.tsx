@@ -48,7 +48,7 @@ const LoginModal = () => {
         setIsLoading(false)
 
         if (callback?.ok) {
-          toast.success("Login successful")
+          toast.success("Login Success")
           router.refresh
           loginModal.onClose()
         }
@@ -107,7 +107,7 @@ const LoginModal = () => {
         outline
         label="Continue with Github"
         icon={AiFillGithub}
-        onClick={() => { }}
+        onClick={() => signIn('github')}
       />
       <div
         className="

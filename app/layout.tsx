@@ -10,7 +10,7 @@ import TosterProvider from "./providers/TosterProvider";
 import LoginModal from "./components/Modals/LoginModal";
 import getCurrentUser from "./actions/getCurrentUser";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Full-Stack Airbnb Clone",
@@ -26,7 +26,7 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const currentUser = await getCurrentUser()
+  const currentUser = await getCurrentUser();
   return (
     <html lang="en">
       <body className={font.className}>
@@ -34,7 +34,7 @@ export default async function RootLayout({
           <TosterProvider />
           <LoginModal />
           <RegisterModal />
-          <Navbar currentUser = {currentUser} />
+          <Navbar currentUser={currentUser} />
         </ClientOnly>
 
         {children}
