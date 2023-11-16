@@ -50,10 +50,10 @@ const Counter: React.FC<CounterProps> = ({
                      justify-center text-neutral-600
                      cursor-pointer hover:opacity-80 transition"
                 >
-                  <AiOutlineMinus />
+                    <AiOutlineMinus />
                 </div>
                 <div className="font-light text-xl text-neutral-600">
-                  {value}
+                    {value}
                 </div>
                 <div
                     onClick={onAdd}
@@ -62,7 +62,7 @@ const Counter: React.FC<CounterProps> = ({
                      justify-center text-neutral-600
                      cursor-pointer hover:opacity-80 transition"
                 >
-                  <AiOutlinePlus />
+                    <AiOutlinePlus />
                 </div>
 
             </div>

@@ -59,9 +59,9 @@ const RentModal = () => {
     const roomCount = watch('roomCount')
     const bathroomCount = watch('bathroomCount')
 
-    // const map = useMemo(() => dynamic(() => import('../Map'), {
-    //     ssr: false,
-    // }), [location])
+    const map = useMemo(() => dynamic(() => import('../Map'), {
+        ssr: false,
+    }), [location])
 
     const setCustomValue = (id: string, value: any) => {
         setValue(id, value, {
@@ -140,8 +140,12 @@ const RentModal = () => {
 
                 <CountrySelect
                     value={location}
-                    onChange={(value) => setCustomValue('location', value)} />
+                    onChange={(value) => setCustomValue('location', value)}
+                /> 
+
                 {/* <Map center={location?.latlng} /> */}
+
+
             </div>
         )
     }
